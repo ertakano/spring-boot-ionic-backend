@@ -1,15 +1,14 @@
-package br.erico.cursomc.cursomc;
+package br.erico.cursomc;
 
-import br.erico.cursomc.cursomc.domain.Categoria;
-import br.erico.cursomc.cursomc.domain.Produto;
-import br.erico.cursomc.cursomc.repositories.CategoriaRepository;
-import br.erico.cursomc.cursomc.repositories.ProdutoRepository;
+import br.erico.cursomc.domain.Categoria;
+import br.erico.cursomc.domain.Produto;
+import br.erico.cursomc.repositories.CategoriaRepository;
+import br.erico.cursomc.repositories.ProdutoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-import java.util.ArrayList;
 import java.util.Arrays;
 
 @SpringBootApplication

@@ -1,6 +1,6 @@
-package br.erico.cursomc.cursomc.repositories;
+package br.erico.cursomc.repositories;
 
-import br.erico.cursomc.cursomc.domain.Produto;
+import br.erico.cursomc.domain.Produto;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
