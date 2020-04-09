@@ -1,6 +1,7 @@
 package br.erico.cursomc.services;
 
 import br.erico.cursomc.domain.Categoria;
+import br.erico.cursomc.dto.CategoriaDTO;
 import br.erico.cursomc.services.exception.ObjectNotFoundException;
 import br.erico.cursomc.services.exception.DataIntegrityException;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -53,6 +54,10 @@ public class CategoriaService {
     public Page<Categoria> findPage(Integer page, Integer linesPerPage, String direction, String orderBy) {
         PageRequest pageRequest = PageRequest.of(page, linesPerPage, Sort.Direction.valueOf(direction), orderBy);
         return repo.findAll(pageRequest);
+    }
+
+    public Categoria fromDto(CategoriaDTO objDto){
+        return new Categoria(objDto.getId(), objDto.getNome());
     }
 
 }
