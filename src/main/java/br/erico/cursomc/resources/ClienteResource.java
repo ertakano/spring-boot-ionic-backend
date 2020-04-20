@@ -1,8 +1,8 @@
 package br.erico.cursomc.resources;
 
 import br.erico.cursomc.domain.Cliente;
-import br.erico.cursomc.dto.CategoriaDTO;
 import br.erico.cursomc.dto.ClienteDTO;
+import br.erico.cursomc.dto.ClienteNewDTO;
 import br.erico.cursomc.services.ClienteService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
@@ -29,7 +29,7 @@ public class ClienteResource {
     }
 
     @RequestMapping(method = RequestMethod.POST)
-    public ResponseEntity<Cliente> insert(@PathVariable ClienteDTO objDto){
+    public ResponseEntity<Cliente> insert(@PathVariable ClienteNewDTO objDto){
         Cliente obj = service.fromDto(objDto);
         obj = service.insert(obj);
         URI uri = ServletUriComponentsBuilder.fromCurrentRequest()
@@ -38,7 +38,7 @@ public class ClienteResource {
     }
 
     @RequestMapping(value = "/{id}", method = RequestMethod.PUT)
-    public ResponseEntity<Void> update(@Valid @RequestBody ClienteDTO objDto, @PathVariable Integer id){
+    public ResponseEntity<Void> update(@Valid @RequestBody ClienteNewDTO objDto, @PathVariable Integer id){
         Cliente obj = service.fromDto(objDto);
         obj.setId(id);
         obj = service.update(obj);
