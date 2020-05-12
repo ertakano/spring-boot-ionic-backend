@@ -6,7 +6,6 @@ import br.erico.cursomc.domain.Pedido;
 import br.erico.cursomc.domain.enums.EstadoPagamento;
 import br.erico.cursomc.repositories.ItemPedidoRepository;
 import br.erico.cursomc.repositories.PagamentoRepository;
-import br.erico.cursomc.repositories.ProdutoRepository;
 import br.erico.cursomc.services.exception.ObjectNotFoundException;
 import br.erico.cursomc.repositories.PedidoRepository;
 import org.springframework.beans.factory.annotation.Autowired;

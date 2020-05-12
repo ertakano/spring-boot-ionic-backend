@@ -1,8 +1,6 @@
 package br.erico.cursomc.resources;
 
-import br.erico.cursomc.domain.Categoria;
 import br.erico.cursomc.domain.Pedido;
-import br.erico.cursomc.dto.CategoriaDTO;
 import br.erico.cursomc.services.PedidoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
